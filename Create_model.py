@@ -139,8 +139,19 @@ create_table_queries = [
         DATE_ECHEANT DATE,
         PRIMARY KEY (NUMERO_REG),
         FOREIGN KEY (NUMEROFACTURE) REFERENCES FACTURE (NUMEROFACTURE) ON DELETE RESTRICT ON UPDATE RESTRICT
-    )
+    )    
+    """,
     """
+
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,        
+    username TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL
+)
+"""
+
+
 ]
 
 # Exécution des requêtes de création des tables
