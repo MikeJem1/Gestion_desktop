@@ -7,7 +7,7 @@ import sqlite3
 
 #la verification de la connection 
 def verification_connection(username, password):
-    conn= sqlite3.connect('') # le nom du base de donnees dans votre rep
+    conn= sqlite3.connect('database.db') # le nom du base de donnees dans votre rep
     cur= conn.cursor()
     cur.execute("SELECT * FROM users WHERE username=? AND password=?', (username, password)")
     user=cur.fetchone()
